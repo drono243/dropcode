@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share files between devices with a simple transfer code." />
+  <title>DropCode — Files, in bloom</title>
+  <link rel="stylesheet" href="/bloom.css" />
+</head>
+<body>
+  <main class="shell">
+    <nav><a class="brand" href="/"><span class="brand-mark">✦</span> DropCode</a><div class="nav-links"><a href="#transfer">Share files</a><a href="#how">How it works</a></div><a class="nav-action" href="#transfer">Send a file</a></nav>
+
+    <section class="hero">
+      <div class="hero-copy"><span class="tiny-mark">✦</span><h1>Where files<br><em>flow</em> freely.</h1><p>Private browser file sharing that feels effortless. No account, no install—just a simple code.</p><a class="hero-action" href="#transfer">Start sharing <span>→</span></a></div>
+      <div class="hero-visual" aria-hidden="true"><div class="halo halo-one"></div><div class="halo halo-two"></div><div class="coin coin-left">↗</div><div class="coin coin-right">↓</div><div class="bloom bloom-a"></div><div class="bloom bloom-b"></div><div class="flower flower-a">✦</div><div class="flower flower-b">✦</div></div>
+    </section>
+
+    <section class="intro"><div><h2>File sharing,<br>made simple.</h2><p>DropCode gives your files a short, private path from one device to another.</p></div><div class="intro-note"><span>01</span><p>Upload a file and we create a one-time transfer code. Anyone with that code can receive it.</p></div></section>
+
+    <section class="transfer-card" id="transfer" aria-label="File transfer">
+      <div class="transfer-heading"><span>DROP CODE / TRANSFER</span><p>Available for 24 hours</p></div>
+      <div class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-panel="send"><i>01</i> Send a file</button><button class="tab" role="tab" aria-selected="false" data-panel="receive"><i>02</i> Receive a file</button></div>
+      <div id="send" class="panel active" role="tabpanel"><div class="panel-heading"><h2>Send something beautiful.</h2><p>Choose a file from this device. We’ll create a shareable code and link.</p></div><form id="uploadForm"><label class="drop-zone" id="dropZone" for="fileInput"><input id="fileInput" name="file" type="file" /><span class="upload-icon">↑</span><strong>Drop your file here</strong><small>or click to browse · max 500 MB</small><span class="file-name" id="fileName"></span></label><button class="primary" id="sendButton" type="submit">Generate transfer code <span>→</span></button></form><div class="result hidden" id="sendResult" aria-live="polite"><p class="result-label">YOUR TRANSFER CODE</p><div class="code-row"><strong id="generatedCode"></strong><button class="copy" id="copyCode" type="button">Copy</button></div><a id="generatedLink" target="_blank" rel="noopener"></a><p class="expiry">Available for 24 hours.</p></div></div>
+      <div id="receive" class="panel" role="tabpanel"><div class="panel-heading"><h2>Receive with ease.</h2><p>Enter the code you were sent to find your file.</p></div><form id="receiveForm"><label for="receiveCode">Transfer code</label><input id="receiveCode" autocomplete="off" placeholder="ABCD-1234" maxlength="9" /><button class="primary" type="submit">Find my file <span>→</span></button></form><div class="received hidden" id="receivedResult" aria-live="polite"><div><p class="result-label">READY TO DOWNLOAD</p><strong id="receivedName"></strong><small id="receivedSize"></small></div><div class="file-actions"><button class="preview-button" id="previewButton" type="button">Preview</button><a class="download" id="downloadLink">Download <span>↓</span></a></div></div><div class="preview hidden" id="preview" aria-live="polite"><div class="preview-top"><p class="result-label">FILE PREVIEW</p><button id="closePreview" type="button" aria-label="Close preview">×</button></div><div id="previewContent"></div></div></div>
+      <p class="status" id="status" role="status"></p>
+    </section>
+
+    <section class="how" id="how"><div class="how-title"><span>DROP CODE IN ACTION</span><h2>How it works</h2><p>Every transfer follows a simple path.</p></div><div class="steps"><article><b>01</b><h3>Choose</h3><p>Select a file from your phone, computer, or tablet.</p></article><article><b>02</b><h3>Share</h3><p>Send the generated code or direct link to someone.</p></article><article><b>03</b><h3>Receive</h3><p>Enter the code from any browser and download.</p></article></div></section>
+    <footer><a class="brand" href="/"><span class="brand-mark">✦</span> DropCode</a><span>Files are automatically removed after 24 hours.</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

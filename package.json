@@ -1,0 +1,11 @@
+{
+  "name": "dropcode",
+  "version": "1.0.0",
+  "description": "Simple browser-to-browser file sharing using a transfer code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/check.js"
+  },
+  "dependencies": {}
+}
