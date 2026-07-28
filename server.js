@@ -5,7 +5,7 @@ const os = require('os');
 const path = require('path');
 
 const port = Number(process.env.PORT) || 3000;
-const host = process.env.HOST || '127.0.0.1';
+const host = '0.0.0.0';
 // Windows' temp folder is writable when the app folder is protected by the OS.
 // Each transfer gets a random filename and is deleted automatically after 24 hours.
 const uploadDir = os.tmpdir();
